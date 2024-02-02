@@ -1,2 +1,5 @@
-# estudos-asp-net
-📚 Estudos web API com ASP .NET Core.
+```bash
+dotnet new webapi -n NomeDoProjeto
+
+dotnet run
+```
