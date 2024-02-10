@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using APICatalogo.Validations;
 
 namespace APICatalogo.Models;
 
@@ -10,19 +11,20 @@ public class Produto
     [Key]
     public int ProdutoId { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "O nome é obrigatório.")]
     [StringLength(80)]
+    [PascalCase]
     public string? Nome { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "A descrição é obrigatória.")]
     [StringLength(300)]
     public string? Descricao { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "O preço é obrigatório.")]
     [Column(TypeName = "decimal(10,2)")]
     public decimal Preco { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "A url é obrigatória.")]
     [StringLength(300)]
     public string? ImagemUrl { get; set; }
 

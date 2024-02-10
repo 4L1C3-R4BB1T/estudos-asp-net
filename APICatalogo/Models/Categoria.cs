@@ -15,11 +15,11 @@ public class Categoria
     [Key]
     public int CategoriaId { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "O nome é obrigatório.")]
     [StringLength(80)]
     public string? Nome { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "A url é obrigatória.")]
     [StringLength(300)]
     public string? ImagemUrl { get; set; }
 
