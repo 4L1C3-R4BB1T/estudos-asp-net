@@ -1,4 +1,5 @@
 using APICatalogo.Context;
+using APICatalogo.Filters;
 using APICatalogo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,9 +12,12 @@ public class CategoriasController : ControllerBase
 {
     private readonly AppDbContext _context;
 
-    public CategoriasController(AppDbContext context)
+    private readonly ILogger _logger;
+
+    public CategoriasController(AppDbContext context, ILogger<CategoriasController> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     [HttpGet("produtos")]
@@ -31,10 +35,12 @@ public class CategoriasController : ControllerBase
     }
 
     [HttpGet]
+    // [ServiceFilter(typeof(ApiLoggingFilter))]
     public ActionResult<IEnumerable<Categoria>> Get()
     {
         try
         {
+            _logger.LogInformation("======= GET /categorias =======");
             return _context.Categorias.AsNoTracking().ToList();
         }
         catch (Exception)
@@ -83,7 +89,7 @@ public class CategoriasController : ControllerBase
         }
         catch (Exception)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, 
+            return StatusCode(StatusCodes.Status500InternalServerError,
                 "Ocorreu um problema ao tratar a sua solicitação.");
         }
     }
@@ -97,7 +103,7 @@ public class CategoriasController : ControllerBase
             {
                 return BadRequest("Dados inválidos");
             }
-            
+
             _context.Entry(categoria).State = EntityState.Modified;
             _context.SaveChanges();
 
@@ -124,12 +130,12 @@ public class CategoriasController : ControllerBase
 
             _context.Categorias.Remove(categoria);
             _context.SaveChanges();
-            
+
             return Ok(categoria);
         }
         catch (Exception)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, 
+            return StatusCode(StatusCodes.Status500InternalServerError,
                 "Ocorreu um problema ao tratar a sua solicitação.");
         }
     }
