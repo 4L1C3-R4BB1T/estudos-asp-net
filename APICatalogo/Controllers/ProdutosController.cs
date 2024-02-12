@@ -20,10 +20,12 @@ public class ProdutosController : ControllerBase
     public ActionResult<IEnumerable<Produto>> Get()
     {
         var produtos = _context.Produtos.ToList();
+
         if (produtos is null)
         {
             return NotFound("Produtos não encontrados.");
         }
+
         return produtos;
     }
 
@@ -31,10 +33,12 @@ public class ProdutosController : ControllerBase
     public ActionResult<Produto> Get(int id)
     {
         var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
+
         if (produto is null)
         {
             return NotFound("Produto não encontrado.");
         }
+
         return produto;
     }
 
