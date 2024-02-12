@@ -25,15 +25,15 @@ public class CustomerLogger : ILogger
     public void Log<TState>(LogLevel logLevel, EventId eventId, TState state,
         Exception? exception, Func<TState, Exception?, string> formatter)
     {
-        string mensagem = $"{logLevel.ToString()}: {eventId.Id} - {formatter(state, exception)}";
-        EscreverTextoNoArquivo(mensagem);
+        string message = $"{logLevel}: {eventId.Id} - {formatter(state, exception)}";
+        WriteLog(message);
     }
 
-    private void EscreverTextoNoArquivo(string mensagem)
+    private void WriteLog(string mensagem)
     {
-        string caminhoArquivoLog = @"C:\Users\livia\OneDrive\Área de Trabalho\estudos-asp-net\APICatalogo\Log.txt";
+        string path = @"C:\Users\livia\OneDrive\Área de Trabalho\estudos-asp-net\APICatalogo\Log.txt";
 
-        using (StreamWriter streamWriter = new StreamWriter(caminhoArquivoLog, true))
+        using (StreamWriter streamWriter = new StreamWriter(path, true))
         {
             try
             {
