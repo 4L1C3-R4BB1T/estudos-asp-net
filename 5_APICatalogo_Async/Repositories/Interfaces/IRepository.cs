@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 
-namespace APICatalogo.Interfaces.Repositories;
+namespace APICatalog.Repositories.Interfaces;
 
 public interface IRepository<T>
 {

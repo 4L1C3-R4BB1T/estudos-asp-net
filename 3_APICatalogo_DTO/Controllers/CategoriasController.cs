@@ -1,7 +1,7 @@
 using APICatalogo.DTO;
 using APICatalogo.DTO.Mappings;
 using APICatalogo.Filters;
-using APICatalogo.Interfaces.Repositories;
+using APICatalogo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APICatalogo.Controllers;

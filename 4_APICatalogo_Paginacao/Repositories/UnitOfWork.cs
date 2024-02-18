@@ -1,7 +1,7 @@
+using APICatalog.Repositories.Interfaces;
 using APICatalogo.Context;
-using APICatalogo.Interfaces.Repositories;
 
-namespace APICatalogo.Respositories;
+namespace APICatalogo.Repositories;
 
 public class UnitOfWork : IUnitOfWork
 {

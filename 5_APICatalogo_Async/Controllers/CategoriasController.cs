@@ -1,7 +1,7 @@
+using APICatalog.Repositories.Interfaces;
 using APICatalogo.DTO;
 using APICatalogo.DTO.Mappings;
 using APICatalogo.Filters;
-using APICatalogo.Interfaces.Repositories;
 using APICatalogo.Models;
 using APICatalogo.Pagination;
 using Microsoft.AspNetCore.Mvc;

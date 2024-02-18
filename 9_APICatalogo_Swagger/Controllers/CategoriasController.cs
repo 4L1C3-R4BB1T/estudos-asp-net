@@ -1,9 +1,9 @@
 using APICatalogo.DTO;
 using APICatalogo.DTO.Mappings;
 using APICatalogo.Filters;
-using APICatalogo.Interfaces.Repositories;
 using APICatalogo.Models;
 using APICatalogo.Pagination;
+using APICatalogo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;

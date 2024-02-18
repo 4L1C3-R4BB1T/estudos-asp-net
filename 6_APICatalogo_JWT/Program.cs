@@ -1,12 +1,12 @@
 using System.Text;
 using System.Text.Json.Serialization;
 using APICatalogo.Context;
+using APICatalogo.DTO.Mappings;
 using APICatalogo.Extensions;
 using APICatalogo.Filters;
-using APICatalogo.Interfaces.Repositories;
-using APICatalogo.Mappings.DTO;
 using APICatalogo.Models;
-using APICatalogo.Respositories;
+using APICatalogo.Repositories;
+using APICatalogo.Repositories.Interfaces;
 using APICatalogo.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;

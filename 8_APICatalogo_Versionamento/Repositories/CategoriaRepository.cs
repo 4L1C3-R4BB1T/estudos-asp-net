@@ -1,10 +1,10 @@
 using APICatalogo.Context;
 using APICatalogo.Models;
 using APICatalogo.Pagination;
-using APICatalogo.Respositories;
+using APICatalogo.Repositories.Interfaces;
 using X.PagedList;
 
-namespace APICatalogo.Interfaces.Repositories;
+namespace APICatalogo.Repositories;
 
 public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
 {

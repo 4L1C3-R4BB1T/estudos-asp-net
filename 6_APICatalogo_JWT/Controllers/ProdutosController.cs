@@ -1,7 +1,7 @@
 using APICatalogo.DTO;
-using APICatalogo.Interfaces.Repositories;
 using APICatalogo.Models;
 using APICatalogo.Pagination;
+using APICatalogo.Repositories.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;

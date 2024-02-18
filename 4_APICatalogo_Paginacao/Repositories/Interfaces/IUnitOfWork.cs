@@ -1,4 +1,4 @@
-namespace APICatalogo.Interfaces.Repositories;
+namespace APICatalog.Repositories.Interfaces;
 
 public interface IUnitOfWork
 {

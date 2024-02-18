@@ -1,6 +1,6 @@
 using APICatalogo.DTO;
-using APICatalogo.Interfaces.Repositories;
 using APICatalogo.Models;
+using APICatalogo.Repositories.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;

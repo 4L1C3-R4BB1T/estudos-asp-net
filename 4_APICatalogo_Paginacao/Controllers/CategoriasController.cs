@@ -1,7 +1,7 @@
+using APICatalog.Repositories.Interfaces;
 using APICatalogo.DTO;
 using APICatalogo.DTO.Mappings;
 using APICatalogo.Filters;
-using APICatalogo.Interfaces.Repositories;
 using APICatalogo.Models;
 using APICatalogo.Pagination;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +13,8 @@ namespace APICatalogo.Controllers;
 [Route("[controller]")]
 public class CategoriasController : ControllerBase
 {
-    private readonly IUnitOfWork _unitOfWork;
+    private readonly IUnitOfWork
+     _unitOfWork;
     private readonly ILogger<CategoriasController> _logger;
 
     public CategoriasController(IUnitOfWork unitOfWork, ILogger<CategoriasController> logger)

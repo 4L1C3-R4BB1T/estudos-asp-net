@@ -1,10 +1,10 @@
 using System.Text.Json.Serialization;
+using APICatalog.Repositories.Interfaces;
 using APICatalogo.Context;
+using APICatalogo.DTO.Mappings;
 using APICatalogo.Extensions;
 using APICatalogo.Filters;
-using APICatalogo.Interfaces.Repositories;
-using APICatalogo.Mappings.DTO;
-using APICatalogo.Respositories;
+using APICatalogo.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

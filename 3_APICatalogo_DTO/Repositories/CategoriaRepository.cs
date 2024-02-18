@@ -1,8 +1,8 @@
 using APICatalogo.Context;
 using APICatalogo.Models;
-using APICatalogo.Respositories;
+using APICatalogo.Repositories.Interfaces;
 
-namespace APICatalogo.Interfaces.Repositories;
+namespace APICatalogo.Repositories;
 
 public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
 {

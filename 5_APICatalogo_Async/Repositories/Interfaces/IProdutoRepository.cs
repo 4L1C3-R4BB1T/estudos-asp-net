@@ -2,7 +2,7 @@ using APICatalogo.Models;
 using APICatalogo.Pagination;
 using X.PagedList;
 
-namespace APICatalogo.Interfaces.Repositories;
+namespace APICatalog.Repositories.Interfaces;
 
 public interface IProdutoRepository : IRepository<Produto>
 {
