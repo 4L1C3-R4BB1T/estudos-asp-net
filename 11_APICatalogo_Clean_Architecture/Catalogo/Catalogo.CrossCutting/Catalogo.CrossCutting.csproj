@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"
+      Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Catalogo.Application\Catalogo.Application.csproj" />
+    <ProjectReference Include="..\Catalogo.Domain\Catalogo.Domain.csproj" />
+    <ProjectReference Include="..\Catalogo.Infrastructure\Catalogo.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

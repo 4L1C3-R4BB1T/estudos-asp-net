@@ -25,3 +25,13 @@ dotnet sln Solucao add NomeDoProjeto
 # adiciona uma referencia ao projeto
 dotnet add NomeDoProjeto reference ProjetoReferencia
 ```
+
+---
+
+### Clean Architecture
+
+- Independente de Frameworks
+- Testável
+- Independente da Camada de Apresentação (UI)
+- Independente do Banco de Dados
+- Independente de fatores externos
